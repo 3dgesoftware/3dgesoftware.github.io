@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DGE Software, LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: #FFA500;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #FF6F20;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h3 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .tws-button {
+            background-color: #003a5c;
+            border: none;
+            border-radius: 20px;
+            padding: 1px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tws-button:hover {
+            background-color: #555;
+        }
+        .tws-button img {
+            height: 60px;
+            width: auto;
+            vertical-align: middle;
+        }
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000;
+            color: #FFFFFF;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .github-button:hover {
+            background-color: #333;
+        }
+        .github-button img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .github-button a {
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="EdgeSoftware_Logo-04-256.webp" alt="3DGE Software, LLC"></a>
+        <a href="index.html">Home</a>
+        <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+              <img src="privacy-1024.webp" alt="Privacy Policy">
+            </div>
+            <div class="text">
+            <h1>Privacy Policy</h1>
+            <h3>Introduction</h3>
+            <p>
+              This Privacy Policy is meant to help you understand the
+              information we collect, how we use this information and what
+              information we share.
+            </p>
+            <h3>
+              Information we collect
+            </h3>
+            <p>
+              The software consists of the Trekking Maps App which makes
+              database requests to the Trekking Maps Server on the users
+              behalf. Database requests are required because it is not
+              practical to bundle terabytes of data with the App. These
+              database requests include vector map tiles, map imagery, 3D
+              geometry, roads and labels.
+            </p>
+            <p>
+              The App may also request your GPS location for the purpose of
+              showing your location on the map, however, the GPS location
+              is NOT shared with the Server. The Server collects logs of
+              database requests which may also include the users Internet
+              Protocol (IP) address.
+            </p>
+            <h3>
+              How we use this Information
+            </h3>
+            <p>
+              The IP address collected by Server logs may be used to
+              monitor Server health (e.g. security breaches or denial of
+              service attacks).
+            </p>
+            <p>
+              The database requests collected by Server logs are aggregated
+              to generate analytics. These analytics are used identify
+              popular areas, improve online services and monitor Server
+              health. These analytics do NOT include the user IP address.
+            </p>
+            <h3>
+              What information we share
+            </h3>
+            <p>
+              The analytics may be published via the app/website or shared
+              with marketing/research partners.
+            </p>
+            <p>
+              We do not share your personal information (e.g. requests
+              associated to an IP address) with third parties unless
+              required by law.
+            </p>
+            <p>
+              We utilize <a href="https://locationiq.com/">LocationIQ</a> (a third party service) for user searches.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+          Copyright (c) 2024 3DGE Software, LLC.
+        </p>
+    </div>
+</body>
+</html>

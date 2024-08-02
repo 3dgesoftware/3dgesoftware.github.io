@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DGE Software, LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: #FFA500;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #FF6F20;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h3 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .tws-button {
+            background-color: #003a5c;
+            border: none;
+            border-radius: 20px;
+            padding: 1px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tws-button:hover {
+            background-color: #555;
+        }
+        .tws-button img {
+            height: 60px;
+            width: auto;
+            vertical-align: middle;
+        }
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000;
+            color: #FFFFFF;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .github-button:hover {
+            background-color: #333;
+        }
+        .github-button img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .github-button a {
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="EdgeSoftware_Logo-04-256.webp" alt="3DGE Software, LLC"></a>
+        <a href="index.html">Home</a>
+        <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+              <img src="credits-fox-1024.webp" alt="Credits">
+            </div>
+            <div class="text">
+            <h1>Credits</h1>
+            <p>
+              <strong>Aerial Imagery</strong><br>
+              Aerial imagery provided by the
+              <a href="https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/">National Agriculture Imagery</a>
+              Program.
+            </p>
+            <p>
+              <strong>ASTER v3 Terrain</strong><br>
+              Worldwide terrain maps are provided by the
+              <a href="https://lpdaac.usgs.gov/products/astgtmv003/">ASTER V3</a>
+              data set.
+            </p>
+            <p>
+              <strong>Barlow Font</strong><br>
+              Provided by the
+              <a href="https://github.com/jpt/barlow/">Barlow Project</a>,
+              under the SIL Open Font License, Version 1.1.
+            </p>
+            <p>
+              <strong>Color Brewer</strong><br>
+              Some color schemes are based on
+              <a href="https://colorbrewer2.org/">ColorBrewer</a>,
+              under the Apache License, Version 2.0.
+            </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+            <p>
+              <strong>Expat XML Parser</strong><br>
+              XML parsing provided by the
+              <a href="https://github.com/jeffboody/libexpat/">Expat XML Parser</a>
+              under the MIT license.
+            </p>
+            <p>
+              <strong>Independent JPEG Group</strong><br>
+              This software is based in part on the work of the
+              <a href="http://www.ijg.org/">Independent JPEG Group</a>.
+            </p>
+            <p>
+              <strong>JSMN</strong><br>
+              JSON parsing is provided by
+              <a href="https://github.com/jeffboody/jsmn">jsmn</a>
+              under the MIT license.
+            </p>
+            <p>
+              <strong>LIBCURL</strong><br>
+              HTTPS networking is provided by
+              <a href="https://github.com/jeffboody/libcurl">libcurl</a>
+              under the CURL LICENSE.
+            </p>
+            </div>
+            <div class="column">
+              <img src="credits-bear-1024.webp" alt="Credits">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="credits-lion-1024.webp" alt="Credits">
+            </div>
+            <div class="text">
+            <p>
+              <strong>LIBTESS2</strong><br>
+              Triangle tesselation is provided by
+              <a href="https://github.com/jeffboody/libtess2">libtess2</a>
+              under the SGI FREE SOFTWARE LICENSE B Version 2.0 license.
+            </p>
+            <p>
+              <strong>LocationIQ</strong><br>
+              Geocoding (search) support is provided by
+              <a href="https://locationiq.com/">LocationIQ</a>.
+            </p>
+            <p>
+              <strong>LodePNG</strong><br>
+              PNG support is provided by
+              <a href="https://github.com/lvandeve/lodepng/">LodePNG</a>
+              under the zlib license.
+            </p>
+            <p>
+              <strong>Material Design Icons</strong><br>
+              <a href="https://github.com/google/material-design-icons/">Material Design</a>
+              icons by Google, under the Apache License, Version 2.0.
+            </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+            <p>
+              <strong>NASA Blue Marble Imagery</strong><br>
+              <a href="http://visibleearth.nasa.gov/">NASA Visible Earth</a>.
+              NASA Goddard Space Flight Center Image by Reto Stockli (land
+              surface, shallow water, clouds). Enhancements by Robert
+              Simmon (ocean color, compositing, 3D globes, animation). Data
+              and technical support: MODIS Land Group; MODIS Science Data
+              Support Team; MODIS Atmosphere Group; MODIS Ocean Group
+              Additional data: USGS EROS Data Center (topography); USGS
+              Terrestrial Remote Sensing Flagstaff Field Center
+              (Antarctica); Defense Meteorological Satellite Program (city
+              lights).
+            </p>
+            <p>
+              <strong>OpenStreetMap</strong><br>
+              <a href="http://www.openstreetmap.org/">OpenStreetMap</a>
+              is open data, licensed under the Open Data Commons Open
+              Database License (ODbL).
+            </p>
+            <p>
+              <strong>Precomputed Atmospheric Scattering</strong><br>
+              Atmospheric rendering is based on a modified version of the
+              <a href="https://github.com/jeffboody/precomputed_atmospheric_scattering">Precomputed Atmospheric Scattering</a>
+              project and is licensed under the BSD license.
+            </p>
+            <p>
+              <strong>Recraft Inc.</strong><br>
+              AI generated images are provided by
+              <a href="https://app.recraft.ai/">recraft.ai</a>
+              and is licensed under the Free Tier.
+            </p>
+            </div>
+            <div class="column">
+              <img src="credits-coyote-1024.webp" alt="Credits">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="credits-deer-1024.webp" alt="Credits">
+            </div>
+            <div class="text">
+            <p>
+              <strong>SQLite</strong><br>
+              The <a href="https://www.sqlite.org/index.html">SQLite</a>
+              database is public domain software.
+            </p>
+            <p>
+              <strong>USGS Terrain</strong><br>
+              Terrain maps for the lower 48 states and Hawaii are courtesy
+              the <a href="http://www.usgs.gov/">U.S. Geological Survey</a>.
+            </p>
+            <p>
+              <strong>Vulkan</strong><br>
+              Low level graphics support is provided by the Khronos Group
+              via the <a href="https://www.khronos.org/vulkan/">Vulkan</a>
+              graphics standard.
+            </p>
+            <p>
+              <strong>Zip</strong><br>
+              Zip file support provided by
+              <a href="https://github.com/jeffboody/zip">zip</a>
+              under the Unlicense license.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+          Copyright (c) 2024 3DGE Software, LLC.
+        </p>
+    </div>
+</body>
+</html>

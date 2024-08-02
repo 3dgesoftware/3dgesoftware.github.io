@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DGE Software, LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Open Sans, sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #212529;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 70px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: #FFA500;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #FF6F20;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+        }
+        .content {
+            flex: 1 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+        }
+        .row:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .row .column {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row h1 {
+            font-size: 3.0em;
+        }
+        .row h3 {
+            font-size: 1.25em;
+        }
+        .row p {
+            font-size: 1.25em;
+        }
+        .row img {
+            max-width: 70%;
+            height: auto;
+            flex: 1;
+        }
+        .row .text {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row a {
+            font-weight: bold;
+        }
+        .tws-button {
+            background-color: #003a5c;
+            border: none;
+            border-radius: 20px;
+            padding: 1px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tws-button:hover {
+            background-color: #555;
+        }
+        .tws-button img {
+            height: 60px;
+            width: auto;
+            vertical-align: middle;
+        }
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000;
+            color: #FFFFFF;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .github-button:hover {
+            background-color: #333;
+        }
+        .github-button img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .github-button a {
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+        .footer {
+            flex-shrink: 0;
+            background-color: #212529;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="EdgeSoftware_Logo-04-256.webp" alt="3DGE Software, LLC"></a>
+        <a href="index.html">Home</a>
+        <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="column">
+              <img src="hiking-boot-logo-1024.webp" alt="Trekking Maps">
+            </div>
+            <div class="text">
+                <h1>Trekking Maps</h1>
+                <p>
+                   Step into the wild. Your ultimate outdoor companion
+                   with high-performance 3D maps, robust location
+                   features, and offline capabilities. Perfect for both
+                   seasoned adventurers and casual explorers.
+                </p>
+                <p>
+                  <a href='https://play.google.com/store/apps/details?id=com.EDGESoftware.TREK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width=35% alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+                <h1>Wilderness Conservation</h1>
+                <p>
+                  I take pride in my contribution to The Wilderness
+                  Society's efforts on the
+                  <a href="https://coreact.org/">CORE Act</a>,
+                  where I created a special feature within Trekking Maps to
+                  showcase the proposed protected areas. I also presented
+                  the app at various events to raise awareness for the CORE
+                  Act. Our unified efforts have led to the designation of
+                  the Camp Hale-Continental Divide National Monument and a
+                  20-year mineral withdrawal on the Thompson Divide. Join
+                  me in supporting The Wilderness Society to ensure future
+                  generations are able to experience our wild places.
+                </p>
+                <p>
+                <button class="tws-button">
+                    <a href='https://www.wilderness.org/'>
+                      <img alt='The Wilderness Society' src='tws.svg'/>
+                    </a>
+                </button>
+                </p>
+            </div>
+            <div class="column">
+              <img src="bobcat-1024.webp" alt="Wilderness Conservation">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="source-1024.webp" alt="Image 2">
+            </div>
+            <div class="text">
+                <h1>GitHub Projects</h1>
+                <p>Explore my open-source projects focused on graphics and artificial intelligence.
+                <ul>
+                  <li><a href="https://github.com/jeffboody/libvkk">VKK</a>: A C library built to simplify Vulkan graphics programming</li>
+                  <li><a href="https://github.com/jeffboody/gearsvk">GearsVK</a>: A Vulkan port of the classic 'gears' demo using VKK</li>
+                  <li><a href="https://github.com/jeffboody/Lanczos">Lanczos</a>: A resampling example with in-depth explanations</li>
+                  <li><a href="https://github.com/jeffboody/libnn">NN</a>: A Vulkan-accelerated neural network library in C</li>
+                  <li><a href="https://github.com/jeffboody/libbfs">BFS</a>: A data management library for efficient binary blob storage</li>
+                  <li><a href="https://github.com/jeffboody/libcc">CC</a>: A C utility library providing data structures, algorithms, and tools</li>
+                </ul>
+                </p>
+                <p>
+                  <a href="https://github.com/jeffboody" class="github-button">
+                      <img src="github-mark/github-mark-white.png" alt="GitHub Logo">
+                      Source Code
+                  </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+          Copyright (c) 2024 3DGE Software, LLC.
+        </p>
+    </div>
+</body>
+</html>
