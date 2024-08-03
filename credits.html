@@ -135,6 +135,39 @@
             height: 60px;
             width: 100%;
         }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px 0;
+          }
+
+          .navbar a {
+            margin: 5px 10px;
+          }
+
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+
+          .row .column {
+            max-width: 66%;
+          }
+
+          .row h1 {
+            font-size: 2em;
+          }
+
+          .row h3, .row p {
+            font-size: 1em;
+          }
+
+          .content {
+            padding: 10px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -147,9 +180,6 @@
     </div>
     <div class="content">
         <div class="row">
-            <div class="column">
-              <img src="credits-fox-1024.webp" alt="Credits">
-            </div>
             <div class="text">
             <h1>Credits</h1>
             <p>
@@ -176,6 +206,9 @@
               <a href="https://colorbrewer2.org/">ColorBrewer</a>,
               under the Apache License, Version 2.0.
             </p>
+            </div>
+            <div class="column">
+              <img src="credits-fox-1024.webp" alt="Credits">
             </div>
         </div>
         <div class="row">
@@ -209,9 +242,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
-              <img src="credits-lion-1024.webp" alt="Credits">
-            </div>
             <div class="text">
             <p>
               <strong>LIBTESS2</strong><br>
@@ -235,6 +265,9 @@
               <a href="https://github.com/google/material-design-icons/">Material Design</a>
               icons by Google, under the Apache License, Version 2.0.
             </p>
+            </div>
+            <div class="column">
+              <img src="credits-lion-1024.webp" alt="Credits">
             </div>
         </div>
         <div class="row">
@@ -276,9 +309,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
-              <img src="credits-deer-1024.webp" alt="Credits">
-            </div>
             <div class="text">
             <p>
               <strong>SQLite</strong><br>
@@ -302,6 +332,9 @@
               <a href="https://github.com/jeffboody/zip">zip</a>
               under the Unlicense license.
             </p>
+            </div>
+            <div class="column">
+              <img src="credits-deer-1024.webp" alt="Credits">
             </div>
         </div>
     </div>

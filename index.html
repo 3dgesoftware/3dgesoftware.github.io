@@ -135,6 +135,39 @@
             height: 60px;
             width: 100%;
         }
+
+        @media screen and (max-aspect-ratio: 4/3) {
+          .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px 0;
+          }
+
+          .navbar a {
+            margin: 5px 10px;
+          }
+
+          .row {
+            flex-direction: column;
+            padding: 10px;
+          }
+
+          .row .column {
+            max-width: 66%;
+          }
+
+          .row h1 {
+            font-size: 2em;
+          }
+
+          .row h3, .row p {
+            font-size: 1em;
+          }
+
+          .content {
+            padding: 10px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -147,9 +180,6 @@
     </div>
     <div class="content">
         <div class="row">
-            <div class="column">
-              <img src="hiking-boot-logo-1024.webp" alt="Trekking Maps">
-            </div>
             <div class="text">
                 <h1>Trekking Maps</h1>
                 <p>
@@ -161,6 +191,9 @@
                 <p>
                   <a href='https://play.google.com/store/apps/details?id=com.EDGESoftware.TREK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width=35% alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
                 </p>
+            </div>
+            <div class="column">
+              <img src="hiking-boot-logo-1024.webp" alt="Trekking Maps">
             </div>
         </div>
         <div class="row">
@@ -192,9 +225,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
-              <img src="source-1024.webp" alt="Image 2">
-            </div>
             <div class="text">
                 <h1>GitHub Projects</h1>
                 <p>Explore my open-source projects focused on graphics and artificial intelligence.
@@ -213,6 +243,9 @@
                       Source Code
                   </a>
                 </p>
+            </div>
+            <div class="column">
+              <img src="source-1024.webp" alt="Image 2">
             </div>
         </div>
     </div>
