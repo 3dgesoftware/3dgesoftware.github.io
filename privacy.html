@@ -6,40 +6,63 @@
     <title>3DGE Software, LLC</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html, body {
+        body, html {
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: Open Sans, sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
         .navbar {
             position: sticky;
             top: 0;
             background-color: #212529;
-            padding: 10px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
             z-index: 1000;
         }
         .navbar img {
             height: 70px;
-            margin-left: 20px;
-            margin-right: 20px;
         }
-        .navbar a {
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+        .hamburger-bar {
+            width: 30px;
+            height: 3px;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            transition: all 0.3s linear;
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #212529;
+            padding-top: 90px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+        .slide-menu a {
+            display: block;
             color: #FFA500;
             text-decoration: none;
-            margin-right: 20px;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
         }
-        .navbar a:hover {
-            color: #FF6F20;
-            text-decoration: underline;
-            text-underline-offset: 7px;
+        .slide-menu a:hover {
+            background-color: #3a3f44;
         }
         .content {
             flex: 1 0 auto;
@@ -135,35 +158,36 @@
             height: 60px;
             width: 100%;
         }
+        .slide-menu.active {
+            right: 0;
+        }
+        .content.active {
+            margin-right: 300px;
+        }
+        .hamburger.active .hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active .hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
 
         @media screen and (max-aspect-ratio: 4/3) {
-          .navbar {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px 0;
-          }
-
-          .navbar a {
-            margin: 5px 10px;
-          }
-
           .row {
             flex-direction: column;
             padding: 10px;
           }
-
           .row .column {
             max-width: 66%;
           }
-
           .row h1 {
             font-size: 2em;
           }
-
           .row h3, .row p {
             font-size: 1em;
           }
-
           .content {
             padding: 10px;
           }
@@ -171,13 +195,22 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <a href="index.html"><img src="EdgeSoftware_Logo-04-256.webp" alt="3DGE Software, LLC"></a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </nav>
+
+    <div class="slide-menu">
         <a href="index.html">Home</a>
         <a href="credits.html">Credits</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="contact.html">Contact</a>
     </div>
+
     <div class="content">
         <div class="row">
             <div class="text">
@@ -241,10 +274,25 @@
             </div>
         </div>
     </div>
+
     <div class="footer">
         <p>
           Copyright (c) 2024 3DGE Software, LLC.
         </p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const slideMenu = document.querySelector('.slide-menu');
+            const content = document.querySelector('.content');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
